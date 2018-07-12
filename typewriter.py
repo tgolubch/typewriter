@@ -732,7 +732,7 @@ def Run_Blast(min_contig_kcov=5, min_contig_length=300, min_cov=90):
 
 
             # calculate relative coverage over query range
-            relcov = sum(q_cov)/q_len if q_cov!=None else 0.
+            relcov = sum(q_cov)/q_len if q_cov is not None else 0.
             if save_split_cov:
                 rawcov = sum(q_rawcov)/q_len if q_rawcov!=None else 0.
                 # identity should be undiluted by remaining uncovered sequence, so
